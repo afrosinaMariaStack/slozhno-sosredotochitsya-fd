@@ -1,9 +1,112 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-image: var(--backround-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--background-color);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
-body {
-  
+.header {
+  display: grid;
+  justify-self: ;
+  align-self: ;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
+
+.decorated-zone {}
+
+.decorations-zone::after {
+  content: "";
+  position: absolute;
+  justify-self: end;
+  align-self: flex-start;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #FF0070;
+  border-right: 1px solid #FF0070;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.decorations-zone::before {
+  content: "";
+  position: absolute;
+  justify-self: start;
+  align-self: flex-end;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid #FF0070;
+  border-right: 1px solid #FF0070;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.header__rec {
+  position: absolute;
+  gap: 10px;
+  font-family: var(--font-family);
+}
+
+.header__rec::after {
+  content: "";
+  border-radius: 50%;
+}
+
+.header__theme-menu {}
+
+.header__theme-menu-list {}
+
+.header__theme-menu-item {}
+
+.header__theme-menu-button {}
+
+.decorations {
+  font-size: 18px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+}
+
+.header-promo {}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: #000028;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: ;
+  padding: ;
+}
+
+.main__section {
+  display: grid;
+  gap: 20px;
+}
+
+.main__section-title {
+  color: var(--accent-color);
+}
+
+.main__section-content {
+  gap: 10px;
+}
+
+.factors {}
+
+.advice {}
+
+.regular {}
+
+.gallery {}
+
+.gallery-image-item {}
+
+.footer {}
+
