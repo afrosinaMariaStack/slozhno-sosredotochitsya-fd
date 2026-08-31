@@ -4,7 +4,14 @@
 */
 :root {
   --background-image: url(../images/cover-image-dark.png);
-  --background-color: #000028;
   --font-family: 'IBM Plex Mono', monospace;
+  --background-color: #000028;
   --accent-color: #FF0070;
+  --menu-color: #ff0070;
+  --heading-color: #db00ff;
+  --text-color: #F1B2CE;
+  --title-decor-color: #000028;
+  --title-color: #ff0070;
+  --font-size: 18px;
+  --paddind-block: 40px;
 }
