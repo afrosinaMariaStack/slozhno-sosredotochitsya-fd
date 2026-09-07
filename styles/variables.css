@@ -20,3 +20,11 @@
   --gallery-gap: 10px;
   --hover-border-color: rgba(255, 0, 112, 0.4);
 }
+
+@media (min-width: 768px) {
+  :root {
+    --general-padding: 20px;
+    --main-gap: 80px;
+    --main-margin-top: 60px;
+  }
+}

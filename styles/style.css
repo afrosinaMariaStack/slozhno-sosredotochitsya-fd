@@ -9,7 +9,7 @@
   background-color: var(--background-color);
   color: var(--text-color);
   font-size: var(--font-size);
-  font-family: var(--font-family);
+  font-family: var(--font-family, sans-serif);
   line-height: 1.3;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
@@ -93,10 +93,11 @@
 
 .header__theme-menu-button:focus {
   outline: none;
+  border-block-end: 1px solid var(--menu-color);
 }
 
 .header__theme-menu-button:focus-visible {
-  outline: 1px solid var(--menu-color);
+  border-block-end: none;
 }
 
 .header__theme-menu-button_active {
@@ -115,6 +116,27 @@
   background-color: var(--accent-color);
   color: var(--title-decor-color);
   font-size: var(--font-size);
+  font-weight: 700;
+}
+
+.card-text-link {
+  color: var(--text-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.card-text-link:hover {
+  outline: none;
+  border-block-end: 1px solid var(--text-color);
+}
+
+.card-text-link:focus {
+  outline: 1px solid var(--text-color);
+  border-block-end: none;
+}
+
+.card-text-link:focus-visible {
+  border-block-end: none;
 }
 
 .main {
@@ -137,6 +159,7 @@
   line-height: 23.4px;
   font-weight: 700;
   min-height: 47px;
+  background-color: transparent;
 }
 
 .main__section-content {
@@ -161,15 +184,12 @@
   block-size: 100%;
 }
 
-.gallery-image-item {
-  object-fit: cover;
-  object-position: center;
-}
-
 img {
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
 .footer {
@@ -238,7 +258,7 @@ img {
 
   .gallery {
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 20px;
   }
 
   .title-promo {
@@ -294,19 +314,19 @@ img {
   .main__section {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .factors {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr;
+    grid-auto-flow: row;
   }
 
-  .factors .main__section-title {
-    grid-column: 1;
-    grid-row: 1;
+  .factors .main__section-title { 
+    grid-column: 1; 
+    grid-row: 1; 
   }
 
   .factors .main__section-content {
     grid-row: 2;
-    grid-column: auto;
+    grid-column: span 1;
   }
 }
