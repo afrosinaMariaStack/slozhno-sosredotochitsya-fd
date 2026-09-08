@@ -9,7 +9,7 @@
   background-color: var(--background-color);
   color: var(--text-color);
   font-size: var(--font-size);
-  font-family: var(--font-family, 'Arial', 'sans-serif');
+  font-family: var(--font-family, 'Arial'), 'sans-serif';
   line-height: 1.3;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
@@ -97,11 +97,12 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end: none;
+  border-block-end: 1px solid var(--menu-color);
 }
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--menu-color);
+  pointer-events: none;
 }
 
 .decorations {
@@ -207,14 +208,9 @@ img {
 }
 
 @media (min-width: 768px) {
-  :root {
-    --general-padding: 20px;
-    --main-gap: 80px;
-    --main-margin-top: 60px;
-  }
 
   .main {
-    margin-top: 60px;
+    margin-top: var(--main-margin-top);
   }
 
   .header-promo {
